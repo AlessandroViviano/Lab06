@@ -2,12 +2,15 @@ package it.polito.tdp.meteo.model;
 
 import java.util.List;
 
+import it.polito.tdp.meteo.DAO.MeteoDAO;
+
 public class Citta {
 	
 	
 	private String nome;
 	private List<Rilevamento> rilevamenti;
 	private int counter = 0;
+	//private boolean consecutive;
 	
 	
 	
@@ -18,6 +21,7 @@ public class Citta {
 	public Citta(String nome, List<Rilevamento> rilevamenti) {
 		this.nome = nome;
 		this.rilevamenti = rilevamenti;
+		//this.consecutive = false;
 	}
 
 	public String getNome() {
@@ -47,6 +51,14 @@ public class Citta {
 	public void increaseCounter() {
 		this.counter += 1;
 	}
+	
+	//public boolean getConsecutive() {
+		//return consecutive;
+	//}
+	
+	//public void setConsecutive(boolean consecutive) {
+		//this.consecutive = consecutive;
+	//}
 
 	@Override
 	public int hashCode() {
